@@ -1,0 +1,56 @@
+and => logical and => True and False == False
+
+as => part of the with-as statement => with X as Y: pass
+
+assert => ensure (assert) that something is true => assert False, "Error!"
+
+break => stop loop right now => while True: break
+
+class => define a class => class Person(object)
+
+continue => do not process most of the loop, do it again => while True: continue
+
+def => defining a function => def Testing(): pass
+
+del => delete from a dictionary => del X[Y]
+
+elif => else-if condition => if: X; elif: Y; else: Z
+
+else => else condition => if: X; else: Y
+
+except => used when exceptions occur => except ValueError as e: print(e)
+
+exec => run strings as python => exec('print("hi")')
+
+finally => exception or not, do this no matter what => finally: pass
+
+for => loop over a collection of things => for X in Y: pass
+
+from => import specific part of a module => from x import Y
+
+global => declare that you want a global variable => global x
+
+===============================================================
+===============================================================
+===============================================================
+===============================================================
+
+if => if condition => if: X; elif: Y; else: J
+
+import => import a module into this one to use => import os
+
+in => part of for-loops or test of X in Y => for X in Y or 1 in [1] == True
+
+is => like == to test equality => 1 is 1 == True
+
+lambda => create short anonymous function => s = lambda y: y ** y; s(3)
+
+not => logical not => not True == False
+
+or => logical or => True or False == True
+
+pass => this is an empty block => def empty(): pass
+
+print => print this string => print("hello")
+
+raise => raise an exception when something goes wrong => raise ValueErro("No")

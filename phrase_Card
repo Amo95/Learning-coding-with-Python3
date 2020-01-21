@@ -1,0 +1,32 @@
+PRASE DRILL
+
+class X(Y) >>> make a class with name X that is-a Y
+
+class X(object): def __init__(self, J): pass; >>> make a class X that has-a method __init__ which takes self and J parameters
+
+class X(object): def M(self, J) >>> a class X that has-a method M with self and J parameters
+
+foo = X() >>> set foo to the instance of the class X
+
+foo.M(J) >>> from foo, get the method M and call it with self and J parameters
+
+foo.K = Q >>> from foo, get the attribute K and assign it to Q
+
+
+WORD DRILL
+
+class >>> used to make a new type of thing
+
+object >>> is the most basic type of thing or the instance of something
+
+instance >>> is what we get when a class is created
+
+inheritance >>> is a concept that a class inherits traits of other class.
+
+composition >>> is a concept that a class is composed of other classes as parts.
+
+attribute >>> is the property a class have that are from composition and are usually a variable
+
+is-a >>> is a phrase that says something inherits from the other thing
+
+has-a >>> a phrase that says something is composed of the other
