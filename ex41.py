@@ -3,8 +3,12 @@
 import random
 from urllib.request import urlopen
 import sys
+import subprocess
 
-WORD_URL = "http://learncodethehardway.org/words.txt"
+BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[94m', '\033[91m', '\33[97m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m'
+
+# WORD_URL = "http://learncodethehardway.org/words.txt"
+WORD_URL = "file:///media/james/80BEBF1EBEBF0C22/Users/A.J/Desktop/programming/python3/lpthw/ex41_words.txt"
 WORDS = []
 
 PHRASES = {
@@ -62,6 +66,8 @@ def convert(snippet, phrase):
 
 # keep going until they hit CTRL-D
 try:
+	if sys.platform == "linux" or sys.platform == "linux2":
+		subprocess.call("clear", shell=True)
 	while True:
 		snippets = list(PHRASES.keys())
 		random.shuffle(snippets)
@@ -72,9 +78,11 @@ try:
 			if PHRASE_FIRST:
 				question, answer = answer, question
 
-			print(question)
+			print(MAGENTA + question + END)
 
 			input("> ")
-			print("ANSWER:  %s\n\n" % answer)
+			print(RED + "ANSWER:   {}".format(answer) + END)
+			print("\n\n\nPress CTRL-D to close session")
+
 except EOFError:
 	print("\nBye")

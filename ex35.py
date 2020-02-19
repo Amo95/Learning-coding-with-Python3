@@ -3,7 +3,7 @@ from os import system #importing a os.system module to use it features
 
 def gold_room():
   system("clear")
-    print(""""This is room is full of gold. How much do you take?
+  print(""""This is room is full of gold. How much do you take?
 
   Hints: Enter a value""")
 

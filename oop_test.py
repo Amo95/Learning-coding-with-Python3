@@ -1,14 +1,14 @@
 import random
 from urllib.request import urlopen
 import sys
-
+# WORD_URL = "file:///media/james/80BEBF1EBEBF0C22/Users/A.J/Desktop/programming/python3/lpthw/ex41_words.html"
 WORD_URL = "https://learncodethehardway.org/words.txt"
 WORDS = []
 
 PHRASES = {
     "class %%%(%%%):":
       "Make a class named %%% that is-a %%%.",
-    "class %%%(object):\n\tdef __init_(self, ***)":
+    "class %%%(object):\n\tdef __init__(self, ***)":
       "class %%% has-a __init__ that takes self and *** params.",
     "class %%%(object):\n\tdef ***(self, @@@)":
       "class %%% has-a function *** that takes self and @@@ params.",
@@ -18,10 +18,7 @@ PHRASES = {
       "From *** get the *** function, call it with params self, @@@.",
     "***.*** = '***'":
       "From *** get the *** attribute and set it to '***'."
-}
-
-for w in urlopen(WORD_URL).readlines():
-    print(w.decode("utf-8").strip())
+      }
 
 # do they want to drill phrases first
 if len(sys.argv) == 2 and sys.argv[1] == "english":
@@ -31,10 +28,11 @@ else:
 
 # load up the words from the website
 for word in urlopen(WORD_URL).readlines():
-    WORDS.append(str(word.strip(), "utf-8"))
+    WORDS.append(str(word.strip(), 'utf-8'))
 
 def convert(snippet, phrase):
       class_names = [w.capitalize() for w in random.sample(WORDS, snippet.count("%%%"))]
+
       other_names = random.sample(WORDS, snippet.count("***"))
       results = []
       params_names = []
@@ -72,6 +70,7 @@ try:
           for snippet in snippets:
               phrase = PHRASES[snippet]
               question, answer = convert(snippet, phrase)
+
               if PHRASE_FIRST:
                   question, answer =  answer, question
 
